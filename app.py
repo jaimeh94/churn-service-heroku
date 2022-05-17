@@ -16,6 +16,10 @@ with open(dv_file, 'rb') as f_in:
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return '<h1>This is the churn service</h1>'
+
 @app.route('/predict', methods=['POST'])
 def predict():
     customer = request.get_json()
