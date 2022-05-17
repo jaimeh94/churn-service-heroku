@@ -14,7 +14,7 @@ with open(dv_file, 'rb') as f_in:
     dv = pickle.load(f_in)
 
 
-app = Flask('churn')
+app = Flask('churn_service')
 
 @app.route('/predict', methods=['POST'])
 def predict():
