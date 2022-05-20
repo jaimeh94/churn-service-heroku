@@ -1,6 +1,6 @@
 import pickle
 
-from flask import Flask
+from flask import Flask, render_template
 from flask import request
 from flask import jsonify
 
@@ -18,7 +18,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return '<h1>This is the churn service</h1>'
+    return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():

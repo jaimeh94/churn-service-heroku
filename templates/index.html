@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Churn Prediction Service</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Churn Prediction Service</h1>
+  <p>Machine learning model  </p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Hi!! I'm Jaime Cabrera-Salcedo</h3>
+      <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="jaimeh94" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://co.linkedin.com/in/jaimeh94?trk=profile-badge">Jaime Hipólito Cabrera Salcedo</a></div>
+              
+      <p>You can find me in the next links or on the profile above</p>
+      <a href="https://github.com/jaimeh94">https://github.com/jaimeh94</a>
+      <a href="https://www.linkedin.com/in/jaimeh94/">https://www.linkedin.com/in/jaimeh94/</a>
+    </div>
+    <div class="col-sm-4">
+      <h3>How to use the churn-service</h3>
+      <p>This is a example about how to do a request in with python</p>
+      <pre>
+        <code>
+import requests
+url = 'https://churn-service-jhcs.herokuapp.com/predict'
+customer = {"contract": "two_year", "tenure": 12, "monthlycharges": 10}
+prediction = requests.post(url, json=customer).json()
+print(prediction)
+        </code>
+      </pre>
+      <p>You can run by script or in jupyter notebook the code above</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Try yourself</h3>        
+      <p>On contruction</p>
+      <p></p>
+    </div>
+  </div>
+</div>
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+</body>
+
+</html>
+

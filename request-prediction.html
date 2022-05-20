@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <body>
+        <script>
+            let url = new URL('https://google.com/search');
+            url.searchParams.set('q', 'pruébame!');
+
+            // el parámetro 'q' está codificado
+            xhr.open('GET', url); // https://google.com/search?q=test+me%21
+        </script>
+    </body>
+</html>
