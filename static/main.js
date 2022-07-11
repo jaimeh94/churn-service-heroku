@@ -1,4 +1,5 @@
-const URL = 'http://localhost:5500/predict'
+//const URL = 'http://localhost:5500/predict'
+const URL = 'https://churn-service-jhcs.herokuapp.com/predict'
 // const customer = {"contract": "two_year", "tenure": 12, "monthlycharges": 10}
 
 const spanError = document.getElementById('error')
