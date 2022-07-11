@@ -9,14 +9,55 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <style>
+    .texto {
+      background-color: #F1F3FF;
+      font-size: 20px;
+      padding-left: 8%;
+      padding-right: 8%;
+    }
+    .button {
+      background-color: #5D6FD4 ; /* Green */
+      border: 1px solid black;
+      color: white;
+      padding: 15px 32px;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+    .form-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .input {
+      border: 1px solid black;
+    }
+    input:invalid {
+    border: 3px solid red;
+    }
+    .answer {
+      border: 1px solid black;
+    }
+
+  </style>
 
 <div class="jumbotron text-center">
   <h1>Churn Prediction Service</h1>
   <p>Machine learning model  </p> 
+
 </div>
-  
+
+
 <div class="container">
   <div class="row">
+    <div class="texto">
+      <p>
+        Here we have a churn prediction service based in the <a href="https://www.kaggle.com/datasets/blastchar/telco-customer-churn">Telco Customer Churn</a> dataset, the exploratory data analize, training and validation can be looked in this <a href="https://github.com/jaimeh94/ml-zoomcamp/blob/main/03-classification/classnotes_session03-classification.ipynb">Notebook</a>
+      </p>
+    </div>
     <div class="col-sm-4">
       <h3>Hi!! I'm Jaime Cabrera-Salcedo</h3>
       <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="jaimeh94" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://co.linkedin.com/in/jaimeh94?trk=profile-badge">Jaime Hipólito Cabrera Salcedo</a></div>
@@ -39,14 +80,62 @@ print(prediction)
       </pre>
       <p>You can run by script or in jupyter notebook the code above</p>
     </div>
+
+
+
+
     <div class="col-sm-4">
-      <h3>Try yourself</h3>        
-      <p>On contruction</p>
+      <h3>Try yourself</h3>
+      <div>
+        <p>
+          <b>Contract:</b> Indicates the customer’s current contract type: Month-to-Month, One Year, Two Year.
+        </p>
+        <p>
+          <b>Tenure in Months:</b> Indicates the total amount of months that the customer has been with the company.
+        </p>
+        <p>
+          <b>Monthly Charge:</b> Indicates the customer’s current total monthly charge for all their services from the company.
+        </p>
+
+      </div>
+      <form role="form">
+        <div class="form-group">
+      <label>Contract:</label> 
+      <select name="contract" id="contract">
+        <option value="month-to-month">Monthly</option>
+        <option value="one_year">One Year</option>
+        <option value="two_year">Two Year</option>
+      </select> 
+    </div>      
+      <div class="form-group">
+      <label>Tenure:</label> 
+      <input class="input" required type="text" id="tenure" inputmode="numeric" pattern="\d*" min="0" size="2" value="0" />
+      
+      <div class="form-group"></div>
+      <label>Monthly-Charges: </label>
+      <input class="input"required type="text" inputmode="numeric" pattern="\d*" id="monthlycharges" min="0" size="2" value="0"/>
+      </div>
+    </form>
+    <div class="form-group">
+      <button class="button" id="btn1" onclick="prediction()">
+        Get prediction
+      </button>
+    </div>
+      <div class="answer" >
+        <h3 id="pred" ></h3>        
+      </div>
+
       <p></p>
+      <span id="error" ></span>
+      
     </div>
   </div>
 </div>
-  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+  <script
+  type="text/javascript"
+  src="{{ url_for('static', filename='main.js') }}"
+></script> 
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </body>
 
 </html>

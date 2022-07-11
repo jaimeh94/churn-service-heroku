@@ -29,11 +29,13 @@ def predict():
     churn = y_pred >= 0.5
 
     result = {
-        'Question 6 - churn_probability': float(y_pred),
+        'churn_probability': float(y_pred),
         'churn': bool(churn)
     }
     return jsonify(result)
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=9696)
+    app.run(debug=True, host='localhost', port=5500)
+#    app.run(debug=True, host='0.0.0.0', port=9696)
+
