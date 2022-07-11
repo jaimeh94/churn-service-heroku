@@ -79,7 +79,7 @@ In the terminal, we can see the progress while the application is "uploaded" to 
 
 ## Deploy this repo (fast testing)
 In case you want to test the deploy directly, it is possible to use the code from this repository directly. For this, it is first necessary to clone the repository to your machine with the following commands:
-> git clone https://github.com/razekmaiden/churn_service_heroku.git
+> git clone https://github.com/jaimeh94/churn_service_heroku.git
 
 Then you must go inside the cloned repository and open a terminal. Assuming that you already have the Heroku CLI configured, you will need to perform steps 12 and 13 to deploy the model in heroku.
 
