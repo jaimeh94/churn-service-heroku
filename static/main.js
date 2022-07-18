@@ -1,4 +1,4 @@
-//const URL = 'http://localhost:5500/predict'
+//const URL = 'http://localhost:5501/predict'
 const URL = 'https://churn-service-jhcs.herokuapp.com/predict'
 // const customer = {"contract": "two_year", "tenure": 12, "monthlycharges": 10}
 
@@ -18,7 +18,7 @@ async function prediction() {
   console.log(contract.value)
   console.log(customer)
     const res = await fetch(URL, {
- 
+      // mode: 'no-cors'
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
